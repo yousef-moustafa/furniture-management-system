@@ -8,10 +8,7 @@ import java.util.*;
 public class FurnitureBaseTester
 {
     public static void main(String[] args)
-    {
-       
-       
-        
+    {        
         // write your tests here
         
     }

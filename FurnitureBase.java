@@ -10,16 +10,103 @@
  * popularity, and sales trends over time.
  */
 
-public class PassFurnitureBase 
+import java.util.*;
+
+public abstract class FurnitureBase 
 {
-   //fields
+   // Basic Attributes
    private int furId;
-    
-   //constructor
- 
+   private String furnitureCategory;
+   private int itemCount;
+   private double price;
+   private HashMap<Integer,FurnitureBase> furnitureInventory;
+   
+   // Additional Attributes
+   private String procurementDate;
+   private String furnitureDescription;
+   private Purchaser associatedPurchaser;
+   
+   //Constructor
+   public FurnitureBase(int id, String category, int count, double price, String date, String description)
+   {
+       furId = id;
+       furnitureCategory = category;
+       itemCount = count;
+       this.price = price;
+       procurementDate = date;
+       furnitureDescription = description;
+       furnitureInventory = new HashMap<>();
+   }
+   
+   // Concrete Methods
+   
+   // Accessors (Getters)
+   public int getID()
+   {
+       return furId;
+   }
+   
+   public String getFurnitureCategory()
+   {
+       return "Category: " + furnitureCategory;
+   }
+   
+   public String getFurnitureDescription()
+   {
+       return "Description: " + furnitureDescription;
+   }
+   
+   // Mutators (Setters)
+   public void setFurnitureCategory(String category)
+   {
+       this.furnitureCategory = category;
+   }
+   
+   public void associatePurchaser(Purchaser buyer)
+   {
+       this.associatedPurchaser = buyer;
+   }
+   
+   // Display Methods
+   
+   public String showAllFurnitureDetails()
+   {
+       String allDetails = "";
+       
+       for (FurnitureBase furniture : furnitureInventory.values())
+       {
+           String type = furniture.getFurnitureCategory();
+           String description = furniture.getFurnitureDescription();
+           allDetails += type + ", " + description + "\n";
+       }
+       
+       return allDetails;
+   }
+   
+   public String toString()
+   {
+       String output = "--------------------------------------------";
+       output += "|" + " Furniture ID: " + furId +                 "|" +
+              "\n | Description: " + furnitureDescription +        "|" +
+              "\n | Category: " + furnitureCategory +              "|" +
+              "\n | Price: $" + price +                            "|" +
+              "\n | Item Level: " + itemCount +                    "|" +
+                  "---------------------------------------------";
+       return output;
+   }
+   
+   public void displayDetails()
+   {
+       System.out.println("***** Procurement Date of the following furniture is: "+ 
+                               procurementDate + " *****" +
+                          toString());
+   }
+   
+   // Abstract Methods
+   public abstract double calculateDiscount();
    
    
-   //methods
+   
    
   
 
