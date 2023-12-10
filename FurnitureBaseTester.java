@@ -7,9 +7,12 @@ import java.util.*;
  */
 public class FurnitureBaseTester
 {
-    public static void main(String[] args)
+    private FurnitureBase wooden_chair;
+    public void doTest()
     {        
         // write your tests here
-        
+    
+        wooden_chair = new FurnitureBase(1, "Chairs", 5, 10, "10/12/2023", "A special wooden chair");
+    
     }
 }

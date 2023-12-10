@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FurnitureType
+comment0.text=\r\n\ The\ FurnitureType\ enum\ class\ represents\ distinct\ furniture\ types\ and\ their\ corresponding\ recommended\ rooms.\r\n\ Each\ enum\ constant\ defines\ a\ specific\ furniture\ type\ along\ with\ its\ recommended\ placement.\r\n\ Example\:\ Sofa\ ->\ Living\ Room,\ Table\ ->\ Dining\ or\ Living\ Room,\ Chair\ ->\ Bedroom\ or\ Office\ or\ Living\ Room\r\n
+comment1.params=recommendedRoom
+comment1.target=FurnitureType(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getRecommendedRoom()
+numComments=3

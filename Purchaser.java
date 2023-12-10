@@ -10,5 +10,59 @@ import java.util.*;
  * facilitating personalized services, promotions, and streamlined communication.
  */
 public class Purchaser {
-    // class members...
+    // Attributes
+    private String id;
+    private String name;
+    private String furnitureType;
+    private String contactDetails;
+    private Date purchaseDate;
+    private ArrayList<String> purchaseHistory;
+    
+    //Simple Constructor
+    public Purchaser(String id, String name, String furnitureType) {
+        this.id = id;
+        this.name = name;
+        this.furnitureType = furnitureType;
+    }
+    
+    //Overloaded Constructor
+    public Purchaser(String id, String name, String furnitureType, String contactDetails, Date purchaseDate) {
+        this.id = id;
+        this.name = name;
+        this.furnitureType = furnitureType;
+        this.contactDetails = contactDetails;
+        this.purchaseDate = purchaseDate;
+        this.purchaseHistory = new ArrayList<>();
+    }
+    
+    // Accessors (Getters)
+    public String getName() {
+        return name;
+    }
+
+    public String getID() {
+        return id;
+    }
+    
+    public List<String> getPurchaseHistory() {
+        return purchaseHistory;
+    }
+
+    public String getContactDetails() {
+        return contactDetails;
+    }
+    
+    // Mutators (Setters)
+    public void setContactDetails(String contact) {
+        this.contactDetails = contact;
+    }
+
+    public void addToPurchaseHistory(String item) {
+        purchaseHistory.add(item);
+    }
+    
+    // Checker (Checks if the purchaser can make purchase or not)
+    public boolean isPurchaseValid(int THRESHOLD_VALUE) {
+        return purchaseHistory.size() < THRESHOLD_VALUE;
+    }
 }

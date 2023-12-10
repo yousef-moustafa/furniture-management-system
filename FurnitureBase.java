@@ -56,6 +56,17 @@ public abstract class FurnitureBase
        return "Description: " + furnitureDescription;
    }
    
+   public double getPrice()
+   {
+        return price;
+   }
+   
+   public Purchaser getPurchaser()
+   {
+       return associatedPurchaser;
+   }
+
+   
    // Mutators (Setters)
    public void setFurnitureCategory(String category)
    {
@@ -86,12 +97,11 @@ public abstract class FurnitureBase
    public String toString()
    {
        String output = "--------------------------------------------";
-       output += "|" + " Furniture ID: " + furId +                 "|" +
-              "\n | Description: " + furnitureDescription +        "|" +
-              "\n | Category: " + furnitureCategory +              "|" +
-              "\n | Price: $" + price +                            "|" +
-              "\n | Item Level: " + itemCount +                    "|" +
-                  "---------------------------------------------";
+       output +=" Furniture ID: " + furId +                 
+              "\n Description: " + furnitureDescription +        
+              "\n  Category: " + furnitureCategory +             
+              "\n  Price: $" + price +                            
+              "\n  Item Level: " + itemCount;                  
        return output;
    }
    
@@ -104,11 +114,5 @@ public abstract class FurnitureBase
    
    // Abstract Methods
    public abstract double calculateDiscount();
-   
-   
-   
-   
-  
-
 }
 
