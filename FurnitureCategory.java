@@ -14,15 +14,16 @@ import java.util.*;
 
 public class FurnitureCategory {
     // Attributes
-    private String id;
+    private int id;
     private String typeName;
     private Double maximumLoad;
     private Boolean isOutdoor;
     private Purchaser recentPurchaser;
     private ArrayList<String> materials;
+    private String supplier;
     
     // Constructor
-    public FurnitureCategory(String id, String typeName, Double maximumLoad, Boolean isOutdoor, Purchaser recentPurchaser) {
+    public FurnitureCategory(int id, String typeName, Double maximumLoad, Boolean isOutdoor, Purchaser recentPurchaser) {
         this.id = id;
         this.typeName = typeName;
         this.maximumLoad = maximumLoad;
@@ -32,7 +33,7 @@ public class FurnitureCategory {
     }
     
     // Accessors (Getters)
-    public String getID() {
+    public int getID() {
         return id;
     }
 

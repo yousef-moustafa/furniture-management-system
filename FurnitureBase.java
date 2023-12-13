@@ -36,6 +36,7 @@ public abstract class FurnitureBase
        procurementDate = date;
        furnitureDescription = description;
        furnitureInventory = new HashMap<>();
+       
    }
    
    // Concrete Methods

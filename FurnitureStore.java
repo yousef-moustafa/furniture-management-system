@@ -7,52 +7,69 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
 {
     private String storeName;
     private String location;
+    private ArrayList<FurnitureBase> furnitureItems;
+    private ArrayList<Purchaser> customerOrders;
+    private ArrayList<FurnitureCategory> suppliers;
 
     // Constructor
     public FurnitureStore(String storeName, String location) {
         this.storeName = storeName;
         this.location = location;
-        
+        furnitureItems = new ArrayList<>();
+        customerOrders = new ArrayList<>();
+        suppliers = new ArrayList<>();
 
         loadFurnitureAndSuppliers();
         loadOrders();
+        linkOrdersToFurniture();
     }
 
     // Implementation of the methods from FURNITURE interface
     @Override
     public void addFurniture(FurnitureBase furniture) {
-       
+       furnitureItems.add(furniture);
     }
 
     @Override
     public void addPurchaser(Purchaser purchaser) {
-     
+        customerOrders.add(purchaser);
     }
 
     @Override
     public void addCategory(FurnitureCategory category) {
-       
+        suppliers.add(category);   
     }
 
     @Override
     public FurnitureBase getFurnitureByID(int id) {
+        for(FurnitureBase furniture : furnitureItems){
+            if (furniture.getID() == id){
+                return furniture;
+            }
+        }
 
-
-	return null; // Not found
+        return null; // Not found
     }
 
     @Override
     public Purchaser getPurchaserByID(int id) {
-     
+        for (Purchaser purchaser : customerOrders) {
+            if (purchaser.getID() == id) {
+                return purchaser;
+            }
+        }
 
-	return null; // Not found
+        return null; // Not found
     }
 
     @Override
     public FurnitureCategory getCategoryByID(int id) {
-
-
-	
+        for (FurnitureCategory category : suppliers) {
+            if (category.getID() == id) {
+                return category;
+            }
+        }
+    
         return null; // Not found
     }
 
