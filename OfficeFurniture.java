@@ -11,7 +11,6 @@
  * and enables the store to target specific marketing and sales strategies towards corporate clients or remote workers.
  */
 public class OfficeFurniture extends FurnitureBase {
-    // class members...
     // OfficeFurniture specific attributes
     private String furnitureCategory; 
     private boolean isErgonomic;
@@ -22,7 +21,7 @@ public class OfficeFurniture extends FurnitureBase {
     public OfficeFurniture(){
     }
     //Overloaded Constructor 
-    public OfficeFurniture(int id, String category, int count, double price, String description, boolean isErgonomic, String material){
+    public OfficeFurniture(int id, String category, String description, int count, double price, boolean isErgonomic, String material){
         super(id, category, description, count, price);
         this.furnitureCategory = category;
         this.isErgonomic = isErgonomic;
@@ -31,7 +30,6 @@ public class OfficeFurniture extends FurnitureBase {
         adjustPrice();
     }
     
-
     //Methods
     public boolean isErgonomicFurniture(){
         return isErgonomic;

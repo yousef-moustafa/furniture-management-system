@@ -2,9 +2,9 @@
 comment0.target=FurnitureCategory
 comment0.text=\r\n\ FurnitureCategory\ denotes\ a\ specific\ category\ or\ type\ within\ the\ FurnitureStore\ system.\r\n\ Each\ category\ is\ distinct,\ such\ as\ chairs,\ tables,\ beds,\ or\ sofas.\ Every\ FurnitureCategory\ \r\n\ has\ a\ unique\ name,\ a\ general\ description\ outlining\ its\ features,\ and\ potentially\ other\ \r\n\ attributes\ like\ average\ price\ range,\ typical\ materials\ used,\ or\ general\ care\ instructions.\r\n\ This\ categorization\ helps\ both\ the\ store's\ staff\ and\ customers\ in\ sorting,\ identifying,\ \r\n\ and\ narrowing\ down\ their\ product\ searches.\ It\ streamlines\ inventory\ management\ by\ \r\n\ grouping\ similar\ items,\ facilitating\ bulk\ operations,\ and\ assisting\ in\ sales\ analytics.\r\n\ The\ FurnitureCategory\ also\ aids\ in\ promotional\ activities,\ allowing\ for\ category-wide\ \r\n\ discounts\ or\ special\ deals.\r\n
 comment1.params=id\ typeName\ maximumLoad\ isOutdoor\ recentPurchaser
-comment1.target=FurnitureCategory(java.lang.String,\ java.lang.String,\ java.lang.Double,\ java.lang.Boolean,\ Purchaser)
+comment1.target=FurnitureCategory(int,\ java.lang.String,\ java.lang.Double,\ java.lang.Boolean,\ Purchaser)
 comment2.params=
-comment2.target=java.lang.String\ getID()
+comment2.target=int\ getID()
 comment3.params=
 comment3.target=java.lang.String\ getTypeName()
 comment4.params=

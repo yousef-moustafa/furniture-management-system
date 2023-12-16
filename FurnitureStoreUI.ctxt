@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=FurnitureStoreUI
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FurnitureStoreUI\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ runUI()
+comment2.params=
+comment2.target=int\ getOption()
+comment3.params=
+comment3.target=void\ addFurniture()
+comment4.params=
+comment4.target=void\ addPurchaser()
+comment5.params=
+comment5.target=void\ addCategory()
+comment6.params=
+comment6.target=void\ viewFurniture()
+comment7.params=
+comment7.target=void\ viewPurchaser()
+comment8.params=
+comment8.target=void\ viewCategory()
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10

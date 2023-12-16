@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=FURNITUREInterface
+comment0.text=\r\n\ This\ interface\ provides\ a\ blueprint\ for\ basic\ operations\ on\ furniture,\ purchasers,\ \r\n\ and\ furniture\ categories\ within\ a\ furniture\ management\ system.\r\n
+comment1.params=furniture
+comment1.target=void\ addFurniture(FurnitureBase)
+comment1.text=\r\n\ Adds\ a\ new\ piece\ of\ furniture\ to\ the\ system.\r\n\r\n\ @param\ furniture\ The\ FurnitureBase\ object\ to\ be\ added.\r\n
+comment2.params=purchaser
+comment2.target=void\ addPurchaser(Purchaser)
+comment2.text=\r\n\ Adds\ a\ new\ purchaser\ to\ the\ system.\r\n\r\n\ @param\ purchaser\ The\ Purchaser\ object\ to\ be\ added.\r\n
+comment3.params=category
+comment3.target=void\ addCategory(FurnitureCategory)
+comment3.text=\r\n\ Adds\ a\ new\ category\ for\ furniture\ in\ the\ system.\r\n\r\n\ @param\ category\ The\ FurnitureCategory\ object\ to\ be\ added.\r\n
+comment4.params=id
+comment4.target=FurnitureBase\ getFurnitureByID(int)
+comment4.text=\r\n\ Retrieves\ a\ piece\ of\ furniture\ by\ its\ unique\ ID.\r\n\r\n\ @param\ id\ The\ unique\ identifier\ of\ the\ desired\ furniture.\r\n\ @return\ FurnitureBase\ object\ with\ the\ matching\ ID\ or\ null\ if\ not\ found.\r\n
+comment5.params=id
+comment5.target=Purchaser\ getPurchaserByID(int)
+comment5.text=\r\n\ Retrieves\ a\ purchaser\ by\ its\ unique\ ID.\r\n\r\n\ @param\ id\ The\ unique\ identifier\ of\ the\ desired\ purchaser.\r\n\ @return\ Purchaser\ object\ with\ the\ matching\ ID\ or\ null\ if\ not\ found.\r\n
+comment6.params=id
+comment6.target=FurnitureCategory\ getCategoryByID(int)
+comment6.text=\r\n\ Retrieves\ a\ furniture\ category\ by\ its\ unique\ ID.\r\n\r\n\ @param\ id\ The\ unique\ identifier\ of\ the\ desired\ furniture\ category.\r\n\ @return\ FurnitureCategory\ object\ with\ the\ matching\ ID\ or\ null\ if\ not\ found.\r\n
+numComments=7
