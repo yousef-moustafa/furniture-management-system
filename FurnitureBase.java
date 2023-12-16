@@ -19,7 +19,7 @@ public abstract class FurnitureBase
    private String furnitureCategory;
    private int itemCount;
    private double price;
-   private HashMap<Integer,FurnitureBase> furnitureInventory = new HashMap<>();
+   private static HashMap<Integer,FurnitureBase> furnitureInventory = new HashMap<>();
    
    // Additional Attributes
    private String procurementDate;
@@ -108,20 +108,20 @@ public abstract class FurnitureBase
    
    public String toString()
    {
-       String output = "--------------------------------------------";
-       output +="\n Furniture ID: " + furId +                 
+       String output = "";
+       output +=" Furniture ID: " + furId +                 
               "\n Description: " + furnitureDescription +        
-              "\n  Category: " + furnitureCategory +             
-              "\n  Price: $" + price +                            
-              "\n  Item Level: " + itemCount;                  
+              "\n Category: " + furnitureCategory +             
+              "\n Price: $" + price +
+              "\n Item Level: "  + itemCount + 
+              "\n Procurement Date: " + procurementDate +
+              "\n Associated Purchaser: " + (associatedPurchaser != null ? associatedPurchaser.getName() : "None");                  
        return output;
    }
    
    public String displayDetails()
    {
-       return "***** Procurement Date of the following furniture is: "+ 
-                               procurementDate + " *****" +
-                          toString();
+       return "Furniture Details - ID: " + furId  + "- Procurement Date: " + procurementDate;
    }
    
    // Abstract Methods
