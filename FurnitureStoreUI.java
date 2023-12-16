@@ -202,7 +202,7 @@ public class FurnitureStoreUI {
         // Check if furniture item exists in store
         if (furniture != null) 
         {
-            System.out.println(furniture.toString());
+            System.out.println(furniture);
         } 
         else 
         {
@@ -212,11 +212,38 @@ public class FurnitureStoreUI {
     }
 
     private void viewPurchaser() {
-       
+        System.out.println("Enter Purchaser ID:");
+        int purchaserId = reader.nextInt();
+        reader.nextLine();
+    
+        Purchaser purchaser = store.getPurchaserByID(purchaserId);
+        // Check if purchaser exists
+        if (purchaser != null) 
+        {
+            System.out.println(purchaser);
+        } 
+        else 
+        {
+            System.out.println("Purchaser not found!");
+        }
     }
 
-    private void viewCategory() {
-       
+    private void viewCategory()
+    {
+        System.out.println("Enter Category ID:");
+        int categoryId = reader.nextInt();
+        reader.nextLine();
+    
+        FurnitureCategory category = store.getCategoryByID(categoryId);
+        // Check if category exists
+        if (category != null) 
+        {
+            System.out.println(category);
+        } 
+        else 
+        {
+            System.out.println("Category not found!");
+        }
     }
 
     public static void main(String[] args) {

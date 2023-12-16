@@ -59,4 +59,17 @@ public class FurnitureCategory {
     public boolean isSuitableForOutdoor() {
         return isOutdoor && maximumLoad > 50.0;
     }
+    
+    // toString() method
+    public String toString()
+   {
+       String output = "";
+       output +=" Category ID: " + id +
+              "\n Type Name: " + typeName +
+              "\n Maximum Load: " + maximumLoad +        
+              "\n Outdoor? " + isOutdoor +             
+              "\n Recent Purchaser: " + recentPurchaser.getName() +
+              "\n Materials: " + (!(materials.isEmpty()) ? materials : "None");                  
+       return output;
+   }
 }

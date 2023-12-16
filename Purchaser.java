@@ -66,4 +66,17 @@ public class Purchaser {
     public boolean isPurchaseValid(int THRESHOLD_VALUE) {
         return purchaseHistory.size() < THRESHOLD_VALUE;
     }
+    
+    // toString() method
+    public String toString()
+   {
+       String output = "";
+       output +=" Purchaser ID: " + id +
+              "\n Purchaser Name: " + name +
+              "\n Furniture Type: " + furnitureType +        
+              "\n Contact Details: " + contactDetails +             
+              "\n Purchase Date: " + purchaseDate +
+              "\n Purchase History: " + (!(purchaseHistory.isEmpty()) ? purchaseHistory : "None");                  
+       return output;
+   }
 }
