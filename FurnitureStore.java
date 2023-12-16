@@ -53,7 +53,7 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
             }
         }
 
-        return null; // Not found
+        return null;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
             }
         }
 
-        return null; // Not found
+        return null;
     }
 
     @Override
@@ -75,7 +75,7 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
             }
         }
     
-        return null; // Not found
+        return null;
     }
 
     // Private methods as specified
