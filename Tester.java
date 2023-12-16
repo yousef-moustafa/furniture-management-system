@@ -8,14 +8,15 @@ import java.util.*;
  */
 
 
-    
+public class Tester{   
 
 // The doTest() method where you will write code to test your system
 public void doTest() {
-        FurnitureInterface  homeFurnishingsDepot = new FurnitureStore("Home Furnishings Depot", "123 Furniture Street");
-	 Scanner enter = new Scanner(System.in);
-	 
-	 // Write all of your tests here
+        FURNITUREInterface  homeFurnishingsDepot = new FurnitureStore("Home Furnishings Depot", "123 Furniture Street");
+         Scanner enter = new Scanner(System.in);
+         
+         // Write all of your tests here
+         
 }
     
     // Main method to make the class executable
@@ -24,7 +25,7 @@ public static void main(String[] args) {
         Tester tester = new Tester();
         tester.doTest();
 }
-
- 
 }
+
+
 
