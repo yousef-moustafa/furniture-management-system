@@ -23,6 +23,7 @@ public class Purchaser {
         this.id = id;
         this.name = name;
         this.furnitureType = furnitureType;
+        this.purchaseHistory = new ArrayList<>();
     }
     
     //Overloaded Constructor
