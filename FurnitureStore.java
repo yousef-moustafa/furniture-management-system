@@ -21,7 +21,6 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
 
         loadFurnitureAndSuppliers();
         loadOrders();
-        linkOrdersToFurniture();
     }
 
     // Implementation of the methods from FURNITURE interface
