@@ -106,11 +106,11 @@ public abstract class FurnitureBase
        return output;
    }
    
-   public void displayDetails()
+   public String displayDetails()
    {
-       System.out.println("***** Procurement Date of the following furniture is: "+ 
+       return "***** Procurement Date of the following furniture is: "+ 
                                procurementDate + " *****" +
-                          toString());
+                          toString();
    }
    
    // Abstract Methods
