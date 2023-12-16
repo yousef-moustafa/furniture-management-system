@@ -20,8 +20,8 @@ public class KidsSet extends FurnitureBase{
     private double price;
     
     // Constructor
-    public KidsSet(int id, String category, int count, double price, String date, String description, String kidsId, String furName) {
-        super(id, category, count, price, date, description);
+    public KidsSet(int id, String category, int count, double price, String description, String kidsId, String furName) {
+        super(id, category, description, count, price);
         this.kidsId = kidsId;
         this.furName = furName;
         this.price = price;

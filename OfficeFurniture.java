@@ -20,14 +20,10 @@ public class OfficeFurniture extends FurnitureBase {
     
     //Default Constructor
     public OfficeFurniture(){
-        super(0, "", 0, 0.0, "", "");
-        this.isErgonomic = false;
-        this.material = "";
-        adjustPrice();
     }
     //Overloaded Constructor 
-    public OfficeFurniture(int id, String category, int count, double price, String date, String description, boolean isErgonomic, String material){
-        super(id, category, count, price, date, description);
+    public OfficeFurniture(int id, String category, int count, double price, String description, boolean isErgonomic, String material){
+        super(id, category, description, count, price);
         this.furnitureCategory = category;
         this.isErgonomic = isErgonomic;
         this.material = material;

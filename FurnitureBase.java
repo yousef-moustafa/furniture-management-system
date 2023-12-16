@@ -19,23 +19,28 @@ public abstract class FurnitureBase
    private String furnitureCategory;
    private int itemCount;
    private double price;
-   private HashMap<Integer,FurnitureBase> furnitureInventory;
+   private HashMap<Integer,FurnitureBase> furnitureInventory = new HashMap<>();
    
    // Additional Attributes
    private String procurementDate;
    private String furnitureDescription;
    private Purchaser associatedPurchaser;
    
-   //Constructor
-   public FurnitureBase(int id, String category, int count, double price, String date, String description)
+   // Default Constructor
+   public FurnitureBase() {
+   }
+   
+   // Parameterised Constructor
+   public FurnitureBase(int id, String category, String description, int count, double price)
    {
        furId = id;
        furnitureCategory = category;
+       furnitureDescription = description;
        itemCount = count;
        this.price = price;
-       procurementDate = date;
-       furnitureDescription = description;
-       furnitureInventory = new HashMap<>();
+       procurementDate = "Not Specified";
+       associatedPurchaser = null;
+       furnitureInventory.put(furId, this);
        
    }
    
@@ -79,6 +84,12 @@ public abstract class FurnitureBase
        this.associatedPurchaser = buyer;
    }
    
+   public void setProcurementDate(String procurementDate) 
+   {
+        this.procurementDate = procurementDate;
+   }
+   
+   
    // Display Methods
    
    public String showAllFurnitureDetails()
@@ -98,7 +109,7 @@ public abstract class FurnitureBase
    public String toString()
    {
        String output = "--------------------------------------------";
-       output +=" Furniture ID: " + furId +                 
+       output +="\n Furniture ID: " + furId +                 
               "\n Description: " + furnitureDescription +        
               "\n  Category: " + furnitureCategory +             
               "\n  Price: $" + price +                            
