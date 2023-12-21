@@ -89,6 +89,7 @@ public class KidsSet extends FurnitureBase{
     
     @Override
     public double calculateDiscount() {
-        return 0;
+        double discount = this.price * 0.30;
+        return Math.round(discount * 100.0) / 100.0;
     }
 }

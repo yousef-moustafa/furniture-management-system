@@ -67,9 +67,9 @@ public abstract class FurnitureBase
         return price;
    }
    
-   public Purchaser getPurchaser()
+   public String getPurchaserName()
    {
-       return associatedPurchaser;
+       return associatedPurchaser.getName();
    }
 
    
