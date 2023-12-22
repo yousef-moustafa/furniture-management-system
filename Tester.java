@@ -33,15 +33,15 @@ public void doTest() {
         
         //Test 2: Adding a Furniture Category
         //Create a FurnitireCategory object
-        FurnitureCategory Table = new FurnitureCategory(2, "Table", 100.0, true, customer);
+        FurnitureCategory Table = new FurnitureCategory(1, "Table", 100.0, true, customer);
         homeFurnishingsDepot.addCategory(Table);
         System.out.println(Table);
         System.out.println("Test 2: Creating a FurnitureCategory - Successful");
         
         //Test 3: Adding Furniture 
         //Create the objects of Furniture Base Class that we declared earlier
-        wooden_table = new OfficeFurniture(1, Table, "A special wooden table", 4, 50, false, "wood");
-        cars_table = new KidsSet(2, Table, "A cars themed table", 5, 80, "SET002" ,"Cars Table");
+        wooden_table = new OfficeFurniture(1, "table", "A special wooden table", 4, 50, false, "wood");
+        cars_table = new KidsSet(2, "crib", "A cars themed table", 5, 80, "SET002" ,"Cars Table");
         homeFurnishingsDepot.addFurniture(wooden_table);
         System.out.println(wooden_table);
         homeFurnishingsDepot.addFurniture(cars_table);
