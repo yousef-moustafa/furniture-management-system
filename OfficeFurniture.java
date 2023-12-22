@@ -12,7 +12,7 @@
  */
 public class OfficeFurniture extends FurnitureBase {
     // OfficeFurniture specific attributes
-    private String furnitureCategory; 
+    private FurnitureCategory furnitureCategory; 
     private boolean isErgonomic;
     private String material;
     private double price;
@@ -21,7 +21,7 @@ public class OfficeFurniture extends FurnitureBase {
     public OfficeFurniture(){
     }
     //Overloaded Constructor 
-    public OfficeFurniture(int id, String category, String description, int count, double price, boolean isErgonomic, String material){
+    public OfficeFurniture(int id, FurnitureCategory category, String description, int count, double price, boolean isErgonomic, String material){
         super(id, category, description, count, price);
         this.furnitureCategory = category;
         this.isErgonomic = isErgonomic;

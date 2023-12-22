@@ -16,7 +16,7 @@ public abstract class FurnitureBase
 {
    // Basic Attributes
    private int furId;
-   private String furnitureCategory;
+   private FurnitureCategory furnitureCategory;
    private int itemCount;
    private double price;
    private static HashMap<Integer,FurnitureBase> furnitureInventory = new HashMap<>();
@@ -31,7 +31,7 @@ public abstract class FurnitureBase
    }
    
    // Parameterised Constructor
-   public FurnitureBase(int id, String category, String description, int count, double price)
+   public FurnitureBase(int id, FurnitureCategory category, String description, int count, double price)
    {
        furId = id;
        furnitureCategory = category;
@@ -74,7 +74,7 @@ public abstract class FurnitureBase
 
    
    // Mutators (Setters)
-   public void setFurnitureCategory(String category)
+   public void setFurnitureCategory(FurnitureCategory category)
    {
        this.furnitureCategory = category;
    }
@@ -111,7 +111,7 @@ public abstract class FurnitureBase
        String output = "";
        output +=" Furniture ID: " + furId +                 
               "\n Description: " + furnitureDescription +        
-              "\n Category: " + furnitureCategory +             
+              "\n Category: " + furnitureCategory.getTypeName() +             
               "\n Price: $" + price +
               "\n Item Level: "  + itemCount + 
               "\n Procurement Date: " + procurementDate +

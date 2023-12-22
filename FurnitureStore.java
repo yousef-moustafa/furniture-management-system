@@ -8,16 +8,16 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
     private String storeName;
     private String location;
     private ArrayList<FurnitureBase> allFurniturePieces;
-    private ArrayList<Purchaser> allCustomerOrders;
-    private ArrayList<FurnitureCategory> allSuppliers;
+    private ArrayList<Purchaser> allPurchasers;
+    private ArrayList<FurnitureCategory> allCategories;
 
     // Constructor
     public FurnitureStore(String storeName, String location) {
         this.storeName = storeName;
         this.location = location;
         allFurniturePieces = new ArrayList<>();
-        allCustomerOrders = new ArrayList<>();
-        allSuppliers = new ArrayList<>();
+        allPurchasers = new ArrayList<>();
+        allCategories = new ArrayList<>();
 
         loadFurnitureAndSuppliers();
         loadOrders();
@@ -26,22 +26,17 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
     // Implementation of the methods from FURNITURE interface
     @Override
     public void addFurniture(FurnitureBase furniture) {
-        int id = furniture.getID();
-        if (id >= allFurniturePieces.size()) // When ID is greater tnat list size
-        {
-            allFurniturePieces.ensureCapacity(id + 1); // Dynamically Allocate memory as needed
-        }
-       allFurniturePieces.set(id, furniture); // Set Furniture where index = id
+        allFurniturePieces.add(furniture);
     }
 
     @Override
     public void addPurchaser(Purchaser purchaser) {
-        allCustomerOrders.add(purchaser);
+        allPurchasers.add(purchaser);
     }
 
     @Override
     public void addCategory(FurnitureCategory category) {
-        allSuppliers.add(category);   
+        allCategories.add(category);   
     }
 
     @Override
@@ -57,7 +52,7 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
 
     @Override
     public Purchaser getPurchaserByID(int id) {
-        for (Purchaser purchaser : allCustomerOrders) {
+        for (Purchaser purchaser : allPurchasers) {
             if (purchaser.getID() == id) {
                 return purchaser;
             }
@@ -68,7 +63,7 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
 
     @Override
     public FurnitureCategory getCategoryByID(int id) {
-        for (FurnitureCategory category : allSuppliers) {
+        for (FurnitureCategory category : allCategories) {
             if (category.getID() == id) {
                 return category;
             }
