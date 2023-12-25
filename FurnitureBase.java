@@ -54,7 +54,7 @@ public abstract class FurnitureBase
    
    public String getFurnitureCategory()
    {
-       return "Category: " + furnitureCategory;
+       return furnitureCategory;
    }
    
    public String getFurnitureDescription()
@@ -119,9 +119,9 @@ public abstract class FurnitureBase
        return output;
    }
    
-   public String displayDetails()
+   public void displayDetails()
    {
-       return "Furniture Details - ID: " + furId  + "- Procurement Date: " + procurementDate;
+       System.out.println("Furniture Details - ID: " + furId  + "- Procurement Date: " + procurementDate + "\n\n" + this.toString());
    }
    
    // Abstract Methods

@@ -9,8 +9,6 @@ import java.util.Scanner;
  * @version 
  */
 
-    
-    
 public class Tester{   
     
     //Furniture Base class subclasses objects to be able to test
