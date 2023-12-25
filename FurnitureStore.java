@@ -124,6 +124,27 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
         addPurchaser(HomeGoods);
         
     }
+    
+    //Accessors (Getters)
+    public String getStoreName(){
+        return this.storeName;
+    }
+    
+    public String getLocation(){
+        return this.location;
+    }
+    
+    public ArrayList<FurnitureBase> getFurniturePieces(){
+        return allFurniturePieces;
+    }
+    
+    public ArrayList<Purchaser> getOrders(){
+        return allOrders;
+    }
+    
+    public ArrayList<FurnitureCategory> getSuppliers(){
+        return allSuppliers;
+    }
 
     // Additional helper methods (optional)
     private FurnitureBase retrieveFurniture(int id) {

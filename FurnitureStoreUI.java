@@ -89,7 +89,7 @@ public class FurnitureStoreUI {
         double price = reader.nextDouble();
         reader.nextLine();
     
-        System.out.println("Is this a KidsSet or an OfficeFurniture?");
+        System.out.println("Is this a KidsSet or an OfficeFurniture or None?");
         String furnitureType = reader.nextLine();
         
         // Check furniture type
@@ -111,6 +111,10 @@ public class FurnitureStoreUI {
             String material = reader.nextLine();
             furniture = new OfficeFurniture(furId, furnitureCategory, furnitureDescription, itemCount, price, isErgonomic, material);
         } 
+        else if (furnitureType.equalsIgnoreCase("None"))
+        {
+            furniture = new PassFurnitureBase(furId, furnitureCategory, furnitureDescription, itemCount, price);
+        }
         else 
         {
             System.out.println("Invalid furniture type!");
