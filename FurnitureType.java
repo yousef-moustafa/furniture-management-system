@@ -8,7 +8,6 @@ public enum FurnitureType {
     SOFA("Living Room"),
     TABLE("Dining Room or Living Room"),
     CHAIR("Living Room, Bedroom, or Office"),
-    // Add more furniture types and their corresponding rooms as needed
     UNKNOWN("No specific recommendation");
 
     private final String recommendedRoom;
@@ -16,7 +15,12 @@ public enum FurnitureType {
     FurnitureType(String recommendedRoom) {
         this.recommendedRoom = recommendedRoom;
     }
-
+    
+    /**
+     * Retrieves the recommended room for the specific furniture type.
+     *
+     * @return the recommended room for the furniture type
+     */
     public String getRecommendedRoom() {
         return recommendedRoom;
     }

@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=PassFurnitureBase
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PassFurnitureBase\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ PassFurnitureBase\ extends\ FurnitureBase\ class\r\n\ to\ create\ default\ objects\ without\ additional\ attributes\r\n
 comment1.params=id\ category\ description\ count\ price
 comment1.target=PassFurnitureBase(int,\ java.lang.String,\ java.lang.String,\ int,\ double)
+comment1.text=\r\n\ Constructs\ a\ PassFurnitureBase\ object\ with\ no\ additional\ attributes.\r\n\r\n\ @param\ id\ the\ ID\ of\ the\ furniture\r\n\ @param\ category\ the\ category\ of\ the\ furniture\r\n\ @param\ description\ the\ description\ of\ the\ furniture\r\n\ @param\ count\ the\ count\ of\ furniture\ items\r\n\ @param\ price\ the\ price\ of\ the\ furniture\r\n
 comment2.params=
 comment2.target=double\ calculateDiscount()
+comment2.text=\r\n\ Calculates\ the\ discount\ for\ this\ PassFurnitureBase.\r\n\ Assumes\ a\ fixed\ discount\ rate\ of\ 30%\ on\ the\ furniture's\ price.\r\n\r\n\ @return\ the\ calculated\ discount\ value,\ rounded\ to\ two\ decimal\ places\r\n
 numComments=3

@@ -1,14 +1,19 @@
 import java.util.*;
 /**
- * Write a description of class FurnitureBaseTester here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * FurnitureBaseTester serves as a testing suite that performs various tests on the
+ * functionalities associated with the FurnitureBase class.
+ * Each test case is designed to test different features of the system.
  */
 public class FurnitureBaseTester
 {
     private FurnitureBase wooden_chair;
     private FurnitureBase modern_sofa;
+    
+    /**
+     * The 'doTest()' method contains a series of tests to evaluate the functionalities of the FurnitureBase class.
+     * It initializes different FurnitureBase objects, sets attributes, tests getter and setter methods,
+     * associates purchasers, calculates discounts, and checks the 'showAllFurnitureDetails()' method.
+     */
     public void doTest()
     {        
         // write your tests here

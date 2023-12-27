@@ -19,6 +19,13 @@ public class Purchaser {
     private ArrayList<String> purchaseHistory;
     
     //Simple Constructor
+    /**
+     * Simple Constructer of Purchaser object with parameters to initialize id, name, and furnitureType.
+     *
+     * @param id the ID of the purchaser
+     * @param name the name of the purchaser
+     * @param furnitureType the type of furniture preferred by the purchaser
+     */
     public Purchaser(int id, String name, String furnitureType) {
         this.id = id;
         this.name = name;
@@ -27,6 +34,15 @@ public class Purchaser {
     }
     
     //Overloaded Constructor
+    /**
+     * Overloaded Constructer that initializes all attributes including contactDetails and purchaseDate.
+     * 
+     * @param id the ID of the purchaser
+     * @param name the name of the purchaser
+     * @param furnitureType the type of furniture preferred by the purchaser
+     * @param contactDetails the contact details of the purchaser
+     * @param purchaseDate the date of purchase for the purchaser
+     */
     public Purchaser(int id, String name, String furnitureType, String contactDetails, Date purchaseDate) {
         this.id = id;
         this.name = name;
@@ -37,37 +53,78 @@ public class Purchaser {
     }
     
     // Accessors (Getters)
+    /**
+     * Retrieves the name of the purchaser.
+     *
+     * @return the name of the purchaser
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Retrieves the ID of the purchaser.
+     *
+     * @return the ID of the purchaser
+     */
     public int getID() {
         return id;
     }
     
+    /**
+     * Retrieves a list of all furniture items previously bought by the purchaser.
+     *
+     * @return the list containing the purchase history of the purchaser
+     */
     public List<String> getPurchaseHistory() {
         return purchaseHistory;
     }
 
+    /**
+     * Retrieves the contact details of the purchaser.
+     *
+     * @return the contact information of the purchaser
+     */
     public String getContactDetails() {
         return contactDetails;
     }
     
     // Mutators (Setters)
+    /**
+     * Updates the contact information of the purchaser.
+     *
+     * @param contact the contact details to set for the purchaser
+     */
     public void setContactDetails(String contact) {
         this.contactDetails = contact;
     }
 
+    /**
+     * Adds a furniture item to the purchaser's purchase history.
+     *
+     * @param item the item to add to the purchase history
+     */
     public void addToPurchaseHistory(String item) {
         purchaseHistory.add(item);
     }
     
     // Checker (Checks if the purchaser can make purchase or not)
+    /**
+     * Checks if the purchaser is eligible to buy that particular item
+     * 
+     * @param THRESHOLD_VALUE the threshold value to compare the purchase history size
+     * @return true if the purchase history size is less than the threshold value, otherwise false
+     */
     public boolean isPurchaseValid(int THRESHOLD_VALUE) {
         return purchaseHistory.size() < THRESHOLD_VALUE;
     }
     
     // toString() method
+    /**
+     * Generates a textual representation of the attributes for the Purchaser object
+     *
+     * @return a formatted string representation of the Purchaser object
+     */
     public String toString()
    {
        String output = "";

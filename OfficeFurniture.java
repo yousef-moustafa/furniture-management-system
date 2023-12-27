@@ -17,10 +17,24 @@ public class OfficeFurniture extends FurnitureBase {
     private String material;
     private double price;
     
-    //Default Constructor
+    /**
+     * Default constructor for the OfficeFurniture class.
+     */
     public OfficeFurniture(){
     }
-    //Overloaded Constructor 
+
+    /**
+     * Overloaded Constructor
+     * Constructs an OfficeFurniture object with office-specific attributes.
+     *
+     * @param id the ID of the office furniture
+     * @param category the category of the office furniture
+     * @param description the description of the office furniture
+     * @param count the count of office furniture items
+     * @param price the price of the office furniture
+     * @param isErgonomic indicates if the office furniture is ergonomic
+     * @param material the material used in the office furniture
+     */
     public OfficeFurniture(int id, String category, String description, int count, double price, boolean isErgonomic, String material){
         super(id, category, description, count, price);
         this.furnitureCategory = category;
@@ -31,21 +45,41 @@ public class OfficeFurniture extends FurnitureBase {
     }
     
     //Methods
+    /**
+     * Checks if the furniture is categorized as ergonomic.
+     *
+     * @return true if the furniture is categorized as ergonomic, otherwise false
+     */
     public boolean isErgonomicFurniture(){
         return isErgonomic;
     }
     
+    /**
+     * Retrieves the material used in the furniture.
+     *
+     * @return the material of the furniture
+     */
     public String getMaterial(){
         return material;
     }
     
+    /**
+     * Retrieves the price of the office furniture.
+     *
+     * @return the price of the office furniture
+     */
     @Override
     public double getPrice(){
         return super.getPrice();
         
     }
     
-    
+    /**
+     * Adjusts the price of the office furniture based on certain criteria.
+     * If the furniture is ergonomic, it applies a 10% price adjustment.
+     * Additionally, it applies material-specific price adjustments for wood and metal.
+     * ("Wood": 15%, "Metal": 5%)
+     */
     public void adjustPrice(){
         if (isErgonomic) {
             double ergonomicAdjustment = super.getPrice() * 0.10;
@@ -63,6 +97,12 @@ public class OfficeFurniture extends FurnitureBase {
         }
     }
     
+    /**
+     * Calculates the discount for this OfficeFurniture.
+     * Assumes a fixed discount rate of 20% on the furniture's price.
+     *
+     * @return the calculated discount value, rounded to two decimal places
+     */
     @Override
     public double calculateDiscount(){
         double discount = this.price * 0.20;

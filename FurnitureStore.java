@@ -11,7 +11,14 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
     private ArrayList<Purchaser> allOrders;
     private ArrayList<FurnitureCategory> allSuppliers;
 
-    // Constructor
+    /**
+     * Constructs a FurnitureStore object with specified store name and location.
+     * Initializes arrays for furniture pieces, orders, and suppliers.
+     * Loads initial orders, furniture items, and suppliers upon construction.
+     *
+     * @param storeName the name of the furniture store
+     * @param location  the location of the furniture store
+     */
     public FurnitureStore(String storeName, String location) {
         this.storeName = storeName;
         this.location = location;
@@ -29,21 +36,42 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
     }
 
     // Implementation of the methods from FURNITURE interface
+    /**
+     * Adds a new piece of furniture to the system.
+     *
+     * @param furniture The FurnitureBase object to be added.
+     */
     @Override
     public void addFurniture(FurnitureBase furniture) {
         allFurniturePieces.set(furniture.getID(), furniture);
     }
 
+    /**
+     * Adds a new purchaser to the system.
+     *
+     * @param purchaser The Purchaser object to be added.
+     */
     @Override
     public void addPurchaser(Purchaser purchaser) {
         allOrders.add(purchaser);
     }
 
+    /**
+     * Adds a new category for furniture in the system.
+     *
+     * @param category The FurnitureCategory object to be added.
+     */
     @Override
     public void addCategory(FurnitureCategory category) {
         allSuppliers.add(category);   
     }
 
+    /**
+     * Retrieves a piece of furniture by its unique ID.
+     *
+     * @param id The unique identifier of the desired furniture.
+     * @return FurnitureBase object with the matching ID or null if not found.
+     */
     @Override
     public FurnitureBase getFurnitureByID(int id) {
         if (id >= 0 && id < allFurniturePieces.size()) 
@@ -53,6 +81,12 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
         return null;
     }
 
+    /**
+     * Retrieves a purchaser by its unique ID.
+     *
+     * @param id The unique identifier of the desired purchaser.
+     * @return Purchaser object with the matching ID or null if not found.
+     */
     @Override
     public Purchaser getPurchaserByID(int id) {
         for (Purchaser purchaser : allOrders) {
@@ -64,6 +98,12 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
         return null;
     }
 
+    /**
+     * Retrieves a furniture category by its unique ID.
+     *
+     * @param id The unique identifier of the desired furniture category.
+     * @return FurnitureCategory object with the matching ID or null if not found.
+     */
     @Override
     public FurnitureCategory getCategoryByID(int id) {
         for (FurnitureCategory category : allSuppliers) {
@@ -74,8 +114,14 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
     
         return null;
     }
-
+    
     // Private methods as specified
+    /**
+     * This method is responsible for creating all the furniture pieces detailed in Appendix A
+     * and subsequently adding them to the furniture collection based on their ID numbers.
+     * It also generates all suppliers, linking furniture objects to their respective suppliers,
+     * and appends them to the supplier collection.
+     */
     private void loadFurnitureAndSuppliers() {
         // Logic to populate furnitureItems and suppliers
         // This may involve instantiating new FurnitureBase and Purchaser objects and adding them to the respective lists.
@@ -109,6 +155,11 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
         
     }
 
+    /**
+     * This function generates all customer orders and incorporates them into the order collection.
+     * It creates purchaser objects for various suppliers (IKEA, Walmart, West Elm, Target, HomeGoods),
+     * adding these purchasers (representing orders) to the order collection.
+     */
     private void loadOrders() {
         //Creating purchaser objects
         Purchaser IKEA = new Purchaser(1, "IKEA", "Chair", "ikea@example.com", new Date());
@@ -126,35 +177,79 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
     }
     
     //Accessors (Getters)
+    /**
+     * Retrieves the name of the furniture store.
+     *
+     * @return the name of the furniture store
+     */
     public String getStoreName(){
         return this.storeName;
     }
     
+    /**
+     * Retrieves the location of the furniture store.
+     *
+     * @return the location of the furniture store
+     */
     public String getLocation(){
         return this.location;
     }
     
+    /**
+     * Retrieves the collection of furniture pieces
+     * available in the furniture store.
+     *
+     * @return the collection of furniture pieces
+     */
     public ArrayList<FurnitureBase> getFurniturePieces(){
         return allFurniturePieces;
     }
     
+    /**
+     * Retrieves the collection of orders (purchasers) placed at the furniture store.
+     *
+     * @return the collection of orders (purchasers)
+     */
     public ArrayList<Purchaser> getOrders(){
         return allOrders;
     }
     
+    /**
+     * Retrieves the collection of furniture suppliers associated with the furniture store.
+     *
+     * @return the collection of furniture suppliers
+     */    
     public ArrayList<FurnitureCategory> getSuppliers(){
         return allSuppliers;
     }
 
     // Additional helper methods (optional)
+    /**
+     * Retrieves furniture based on its ID.
+     *
+     * @param id the ID of the furniture to retrieve
+     * @return the furniture object corresponding to the provided ID
+     */
     private FurnitureBase retrieveFurniture(int id) {
         return getFurnitureByID(id);
     }
-
+    
+    /**
+     * Retrieves a purchaser based on their ID.
+     *
+     * @param id the ID of the purchaser to retrieve
+     * @return the purchaser object corresponding to the provided ID
+     */
     private Purchaser retrievePurchaser(int id) {
         return getPurchaserByID(id);
     }
 
+    /**
+     * Retrieves a furniture category based on its ID.
+     *
+     * @param id the ID of the furniture category to retrieve
+     * @return the furniture category object corresponding to the provided ID
+     */
     private FurnitureCategory retrieveCategory(int id) {
         return getCategoryByID(id);
     }

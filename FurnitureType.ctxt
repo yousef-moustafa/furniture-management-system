@@ -5,4 +5,5 @@ comment1.params=recommendedRoom
 comment1.target=FurnitureType(java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ getRecommendedRoom()
+comment2.text=\r\n\ Retrieves\ the\ recommended\ room\ for\ the\ specific\ furniture\ type.\r\n\r\n\ @return\ the\ recommended\ room\ for\ the\ furniture\ type\r\n
 numComments=3

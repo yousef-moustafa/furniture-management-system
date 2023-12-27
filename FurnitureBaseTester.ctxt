@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=FurnitureBaseTester
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ FurnitureBaseTester\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ FurnitureBaseTester\ serves\ as\ a\ testing\ suite\ that\ performs\ various\ tests\ on\ the\r\n\ functionalities\ associated\ with\ the\ FurnitureBase\ class.\r\n\ Each\ test\ case\ is\ designed\ to\ test\ different\ features\ of\ the\ system.\r\n
 comment1.params=
 comment1.target=void\ doTest()
+comment1.text=\r\n\ The\ 'doTest()'\ method\ contains\ a\ series\ of\ tests\ to\ evaluate\ the\ functionalities\ of\ the\ FurnitureBase\ class.\r\n\ It\ initializes\ different\ FurnitureBase\ objects,\ sets\ attributes,\ tests\ getter\ and\ setter\ methods,\r\n\ associates\ purchasers,\ calculates\ discounts,\ and\ checks\ the\ 'showAllFurnitureDetails()'\ method.\r\n
 numComments=2

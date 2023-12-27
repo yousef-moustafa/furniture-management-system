@@ -3,23 +3,23 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 /**
- * Write a description of class FurnitureStoreUI here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Provides a command line user interface to facilitate the operations related to furniture management,
+ * purchases, and categorization
  */
-
-
 public class FurnitureStoreUI {
     private Scanner reader = new Scanner(System.in);
     private FURNITUREInterface store = new FurnitureStore("Fortune Furnitures", "Downtown");
-
+    
+    /**
+     * Executes the furniture store user interface, prompting the user to choose actions.
+     * Processes user input and executes the corresponding action until the user chooses to quit.
+     */
     public void runUI() {
     
     
         int choice = getOption();
 
-     // process choice
+         // process choice
         while (choice != 0) {
             switch (choice) {
                 case 1:
@@ -44,12 +44,18 @@ public class FurnitureStoreUI {
                     System.out.println("Invalid choice.");
             }
 
-        // output menu & get choice
+            // output menu & get choice
             choice = getOption();
         }
         System.out.println("\nThank you for using Fortune Furnitures System.");
     }
 
+    /**
+     * Prompts the user with a menu of options related to furniture management and information viewing.
+     * Reads the user's choice from the console input and returns the selected option.
+     *
+     * @return the user's chosen option as an integer
+     */
     private int getOption() {
         System.out.println("\nWhat would you like to do?");
         System.out.println("0. Quit");
@@ -62,13 +68,16 @@ public class FurnitureStoreUI {
         System.out.print("Enter your choice: ");
         
 
-    System.out.println("Enter your choice");
+        System.out.println("Enter your choice");
         // read choice
         int option = reader.nextInt();
         reader.nextLine();
         return option;
     }
 
+    /**
+     * Captures user input to add furniture items to the furniture store based on user-provided details.
+     */
     private void addFurniture() {
         // Capture necessary input from user
         System.out.println("Enter the Furniture ID:");
@@ -125,7 +134,10 @@ public class FurnitureStoreUI {
         store.addFurniture(furniture);
         System.out.println("Furniture added successfully!");
     }
-
+    
+    /**
+     * Captures user input to add a purchaser to the furniture store based on user-provided details.
+     */
     private void addPurchaser() {
         // Capture necessary input from user
         System.out.println("Enter Purchaser ID:");
@@ -165,6 +177,9 @@ public class FurnitureStoreUI {
         System.out.println("Purchaser added successfully!");
     }
 
+    /**
+     * Captures user input to add a furniture category to the furniture store based on user-provided details.
+     */
     private void addCategory() {
         // Capture necessary input from user
         System.out.println("Enter Category ID:");
@@ -197,6 +212,9 @@ public class FurnitureStoreUI {
         System.out.println("Category added successfully!");
     }
 
+    /**
+     * Displays details of a specific furniture item in the furniture store based on the provided Furniture ID.
+     */
     private void viewFurniture() {
         System.out.println("Enter Furniture ID:");
         int furnitureId = reader.nextInt();
@@ -215,6 +233,9 @@ public class FurnitureStoreUI {
        
     }
 
+    /**
+     * Displays details of a specific purchaser in the furniture store based on the provided Purchaser ID.
+     */
     private void viewPurchaser() {
         System.out.println("Enter Purchaser ID:");
         int purchaserId = reader.nextInt();
@@ -232,6 +253,9 @@ public class FurnitureStoreUI {
         }
     }
 
+    /**
+     * Displays details of a specific furniture category in the furniture store based on the provided Category ID.
+     */
     private void viewCategory()
     {
         System.out.println("Enter Category ID:");
@@ -250,6 +274,10 @@ public class FurnitureStoreUI {
         }
     }
 
+    /**
+     * The main entry point of the Furniture Store application.
+     * It creates an instance of FurnitureStoreUI and starts the UI by invoking the runUI() method.
+     */
     public static void main(String[] args) {
         FurnitureStoreUI ui = new FurnitureStoreUI();
         ui.runUI();

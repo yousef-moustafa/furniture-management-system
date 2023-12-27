@@ -1,21 +1,20 @@
-/**
- * Write a description of class Tester here.
- * 
- * @author 
- * @version 
- */
-
 import java.util.*;
 import java.util.Scanner;
 
+/**
+ * Tester class to conduct tests on the Furniture Store System functionalities.
+ */
 public class Tester{   
     
     //Furniture Base class subclasses objects to be able to test
     private FurnitureBase wooden_table;
     private FurnitureBase cars_table;
 
-// The doTest() method where you will write code to test your system
-public void doTest() {
+    /**
+     * Method to perform various tests on the functionalities of the Furniture Store System.
+     * Each test case is designed to test different features of the system.
+     */
+    public void doTest() {
         FURNITUREInterface  homeFurnishingsDepot = new FurnitureStore("Home Furnishings Depot", "123 Furniture Street");
          Scanner enter = new Scanner(System.in);
          
@@ -103,16 +102,21 @@ public void doTest() {
         //Test 16: Getting the type name of the category
         System.out.println(Table.getTypeName());
         System.out.println("Test 16: Getting the type name of the Category - Successful");
+            
+            
+    }
         
-        
-}
-    
     // Main method to make the class executable
     // No need to change this
-public static void main(String[] args) {
+    /**
+     * The main method initializes a Tester object and invokes the 'doTest()' method to execute
+     * a series of tests designed to evaluate different functionalities and scenarios within the
+     * furniture store system.
+     */
+    public static void main(String[] args) {
         Tester tester = new Tester();
         tester.doTest();
-}
+    }
 }
 
 

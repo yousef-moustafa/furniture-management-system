@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=Tester
+comment0.text=\r\n\ Tester\ class\ to\ conduct\ tests\ on\ the\ Furniture\ Store\ System\ functionalities.\r\n
 comment1.params=
 comment1.target=void\ doTest()
+comment1.text=\r\n\ Method\ to\ perform\ various\ tests\ on\ the\ functionalities\ of\ the\ Furniture\ Store\ System.\r\n\ Each\ test\ case\ is\ designed\ to\ test\ different\ features\ of\ the\ system.\r\n
 comment2.params=args
 comment2.target=void\ main(java.lang.String[])
+comment2.text=\r\n\ The\ main\ method\ initializes\ a\ Tester\ object\ and\ invokes\ the\ 'doTest()'\ method\ to\ execute\r\n\ a\ series\ of\ tests\ designed\ to\ evaluate\ different\ functionalities\ and\ scenarios\ within\ the\r\n\ furniture\ store\ system.\r\n
 numComments=3

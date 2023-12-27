@@ -20,8 +20,7 @@ public class FurnitureCategory {
     private Boolean isOutdoor;
     private Purchaser recentPurchaser;
     private ArrayList<String> materials;
-    private String supplier;
-    
+
     // Constructor
     /**
      * Constructs a FurnitureCategory object with the following attributes.
