@@ -41,25 +41,25 @@ public class FurnitureBaseTester
         // Calculating Discount for Office Chair
         System.out.println("Wooden Chair has a discount of: $" + wooden_chair.calculateDiscount()); 
         
-        // Testing getter methods for dino_crib
+        // Testing getter methods for modern_sofa
         System.out.println("\n\n*** Testing Object with ID: " + modern_sofa.getID() + " ***");
         System.out.println("Modern Sofa Category: " + modern_sofa.getFurnitureCategory());
         System.out.println("Modern Sofa " + modern_sofa.getFurnitureDescription());
         System.out.println("Modern Sofa Price: $" + modern_sofa.getPrice());
         
-        // Set Purchaser For dino_crib and test the getter method
+        // Set Purchaser For modern_sofa and test the getter method
         Purchaser kidsSet_buyer = new Purchaser(1, "WestElm", "Modern Furniture");
         modern_sofa.associatePurchaser(kidsSet_buyer);
         System.out.println("Modern Sofa Purchaser: " + modern_sofa.getPurchaserName());
         
-        // Testing setter methods for dino_crib and checking change
+        // Testing setter methods for modern_sofa and checking change
         modern_sofa.setFurnitureCategory("New Furniture");
         modern_sofa.setProcurementDate("31/12/2023");
         System.out.println("Modified " + modern_sofa.getFurnitureCategory() + "\n");
         // Testing the displayDetails() method (which prints toString)
         modern_sofa.displayDetails();
         
-        // Calculating Discount for Dinosaur Crib
+        // Calculating Discount for Modern Sofa
         System.out.println("Modern Sofa has a discount of: $" + modern_sofa.calculateDiscount());
          
         // showAllFurnitureDetails() Output (Testing)

@@ -127,14 +127,19 @@ public class Tester{
         Table.addMaterial("Metal");
         System.out.println("Test 20: Adding Material to the furniture category - Successful");
         
-        //Test 21: Printing the Furniture Pieces List and the Suppliers list (of FurnitureCategory objects) i.e testing the loadFurnitureAndSuppliers() method of the FurnitureStore class by printing the list
-        //We used casting in this if statement to not alter with the header of the class as specified
+        //We used casting in this if statement to not alter with the header of the class
         if (homeFurnishingsDepot instanceof FurnitureStore) {
             FurnitureStore furnitureStore = (FurnitureStore) homeFurnishingsDepot;
-        
+            
+            //Test 21: Printing the Furniture Pieces List and the Suppliers list (of FurnitureCategory objects) i.e testing the loadFurnitureAndSuppliers() method of the FurnitureStore class by printing the list
             System.out.println(furnitureStore.getFurniturePieces());
             System.out.println(furnitureStore.getSuppliers());
             System.out.println("Test 21: Loading Furniture and Suplliers Furniture Categories - Successful");
+            
+            //Test 22: Testing getStoreName() and getLocation()
+            System.out.println(furnitureStore.getStoreName());
+            System.out.println(furnitureStore.getLocation());
+            System.out.println("Test 22: Getting Store name and location - Successful");        
         }
         
     }

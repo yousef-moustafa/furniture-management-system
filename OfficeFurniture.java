@@ -46,6 +46,16 @@ public class OfficeFurniture extends FurnitureBase {
     
     //Methods
     /**
+     * Reads the category of office furniture
+     *
+     * @return the category of the office furniture
+     */
+    public String getCategory()
+    {
+        return furnitureCategory;
+    }
+   
+    /**
      * Checks if the furniture is categorized as ergonomic.
      *
      * @return true if the furniture is categorized as ergonomic, otherwise false
