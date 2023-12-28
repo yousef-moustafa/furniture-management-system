@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**This class implements the FIRE FURNITUREInterface interface
  **/
@@ -202,7 +203,14 @@ public class FurnitureStore implements FURNITUREInterface // do not change this 
      * @return the collection of furniture pieces
      */
     public ArrayList<FurnitureBase> getFurniturePieces(){
-        return allFurniturePieces;
+        ArrayList<FurnitureBase> filteredList = new ArrayList<>();
+        for (FurnitureBase furniture : allFurniturePieces) {
+            if (furniture != null) {
+                filteredList.add(furniture);
+            }
+        }
+
+        return filteredList;
     }
     
     /**

@@ -79,13 +79,21 @@ public class Tester{
         System.out.println("Test 11: Checking the validity of the Purchaser to make another purchase - Successful");
         
         //Test 12: Printing the orders (of Purchaser object list) i.e testing the loadOrders() method of the FurnitureStore class by printing the list
+        //We used casting in this if statement to not alter with the header of the class as specified
+        if (homeFurnishingsDepot instanceof FurnitureStore) {
+            FurnitureStore furnitureStore = (FurnitureStore) homeFurnishingsDepot;
+        
+            System.out.println(furnitureStore.getOrders());
+            System.out.println("Test 12: Loading Orders purchasers - Successful");
+        }
+        
         
         
         //Test 13: Adding a Furniture Category to Store (supplier mentioned in specification)
         //Create a FurnitireCategory object
         FurnitureCategory Table = new FurnitureCategory(1, "Table", 100.0, true, customer);
         homeFurnishingsDepot.addCategory(Table);
-        System.out.println("Test 2: Creating a FurnitureCategory - Successful");
+        System.out.println("Test 13: Creating a FurnitureCategory - Successful");
         
         
         //Test 14: Returning Furniture Category by ID,and test the toString() method of the Furniture Category class as well
@@ -102,8 +110,33 @@ public class Tester{
         //Test 16: Getting the type name of the category
         System.out.println(Table.getTypeName());
         System.out.println("Test 16: Getting the type name of the Category - Successful");
-            
-            
+        
+        //Test 17: Getting the maximum load of the category
+        System.out.println(Table.getMaxLoad());
+        System.out.println("Test 17: Getting the maximum load of the Category - Successful");
+        
+        //Test 18: Getting the room recommendation for the furniture category
+        System.out.println(Table.getRoomRecommendation());
+        System.out.println("Test 18: Getting the room recommendation of the Category - Successful");
+        
+        //Test 19: Checking if the furniture category is suitable for outdoor use
+        System.out.println(Table.isSuitableForOutdoor());
+        System.out.println("Test 19: Checking if the furniture category is suitable for outdoor use - Successful");
+        
+        //Test 20: Adding Material to the furniture category
+        Table.addMaterial("Metal");
+        System.out.println("Test 20: Adding Material to the furniture category - Successful");
+        
+        //Test 21: Printing the Furniture Pieces List and the Suppliers list (of FurnitureCategory objects) i.e testing the loadFurnitureAndSuppliers() method of the FurnitureStore class by printing the list
+        //We used casting in this if statement to not alter with the header of the class as specified
+        if (homeFurnishingsDepot instanceof FurnitureStore) {
+            FurnitureStore furnitureStore = (FurnitureStore) homeFurnishingsDepot;
+        
+            System.out.println(furnitureStore.getFurniturePieces());
+            System.out.println(furnitureStore.getSuppliers());
+            System.out.println("Test 21: Loading Furniture and Suplliers Furniture Categories - Successful");
+        }
+        
     }
         
     // Main method to make the class executable
